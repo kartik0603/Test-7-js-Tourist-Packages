@@ -1,0 +1,427 @@
+/* =======================================================================
+Template Name: Youtubers
+Author:  SmartEye Technologies
+Author URI: www.smarteyeapps.com
+Version: 1.0
+coder name:Prabin Raja
+Description: This Template is created for Youtubers
+======================================================================= */
+
+/* ===================================== Import Variables ================================== */
+@import 'variable';
+/* ===================================== Basic CSS ==================================== */
+@import 'base/basic_setup';
+
+/* =================== Header Style Starts Here =================== */
+
+header{
+    background-color: #fff;
+    .header-top{
+        padding: 10px;
+        .logo{
+            img{
+                margin-top: 12px;
+                margin-bottom: 10px
+            }
+        }
+        .clldetal{
+            ul{
+                float: right;
+                li{
+                    float: left;
+                    padding: 10px;
+                    font-weight: 600;
+                    font-size: .93rem;
+                    i{
+                        color: #01b3a7;
+                        margin-right: 5px;
+                    }
+                }
+                .bgb{
+                    padding-top: 18px;
+                }
+                .btn{
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    .header-bottom{
+        background-color: #162e44;
+        .navs{
+            ul{
+                li{
+                    float: left;
+                    padding: 20px 25px;
+                    font-weight: 600;
+                    font-size: .98rem;
+                    a{
+                        color: #FFF;
+                    }
+                    @media screen and (max-width: 767px){
+                        float: none;
+                         padding: 15px;
+                        padding-left: 15px;
+                       
+                    }
+                }
+            }
+        }
+        .socials{
+            ul{
+                float: right;
+                li{
+                    float: left;
+                    padding: 19px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .small-menu{
+        float: right;
+        color: #FFF;
+        font-size: 1.8rem;
+        position: absolute;
+        right: 13px;
+        top: 12px;
+        color: $color-primary;
+    }
+}
+
+/* ===================================== Responsive Style CSS ==================================== */
+.slider{
+   
+    @media screen and (max-width: 575px){
+       margin-top: -20px;
+    }
+    .detail-card{
+        position:absolute;
+        background-color: rgba(0,0,0,0.3);
+        margin-top: -50px;
+        height: 50px;
+        width: 100%;
+        font-size: 1rem;
+        color: #FFF;
+        padding: 10px;
+        z-index: 999;
+    }
+}
+
+/* ===================================== Travel Destinations Style CSS ==================================== */
+
+.travel-destination{
+    @include big-padding();
+    margin-top: -100px;
+    .destination-row{
+        .descol{
+            margin-bottom: 30px;
+        }
+        .destcol{
+            @include shado-1();
+            img{
+                border-radius: 0px;
+                width: 100%;
+            }
+            .layycover{
+                background-color: rgba(0,0,0,0.4);
+                position: absolute;
+                width: calc(100% - 30px);
+                height: 100%;
+                top: 0px;
+                border-radius: 0px;
+                z-index: 99;
+                h4{
+                    position: absolute;
+                    width: 100%;
+                    color: #FFF;
+                    bottom: 7px;
+                    left: 10px;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                }
+                span{
+                    font-weight: 400;
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+}
+
+
+/* =================== About US Starts Here =================== */
+
+.about-us{
+    @include big-padding();
+    padding-top: 110px;
+    background-color: #FFF;
+    .text{
+        p{
+            font-weight: 300;
+            font-size: .9rem;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 10px;
+            line-height: 28px;
+        }
+    }
+    .image{
+        img{
+            margin-top: 0px;
+        }
+    }
+}
+
+/* =================== About US Starts Here =================== */
+
+.out-services{
+    @include big-padding();
+    .serv-row{
+        .serv-col{
+            @include shado-1();
+            background-color: #FFF;
+            padding: 15px;
+            display: flex;
+            margin-bottom: 30px;
+            .icon{
+                font-size: 2.5rem;
+                padding: 10px;
+                margin: auto;
+                color: $color-primary;
+            }
+            .detail{
+                padding: 10px;
+                h4{
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                }
+                p{
+                    font-size: .84rem;
+                }
+            }
+        }
+    }
+}
+
+/* ===================================== Responsive Style CSS ==================================== */
+
+.popular-pack{
+    background-color: #cccccc1a; 
+    @include big-padding();
+    background-position: top;
+    .pack-row{
+        margin-top: 15px;
+        .pack-col{
+            background-color: #FFF;
+            @include shado-1();
+            margin-bottom: 30px;
+            img{
+                
+            }
+            .revire{
+                padding: 10px 15px;
+                display: flow-root;
+                .rat{
+                    li{
+                        float: left;
+                        i{
+                            color: #f1b517;
+                            font-size: .9rem;
+                        }
+                    }
+                }
+                .pric{
+                    float: right;
+                    font-weight: 700;
+                }
+            }
+            .detail{
+                padding: 10px 15px;
+                padding-top: 0px;
+               
+                h4{
+                    font-weight: 600;
+                }
+                p{
+                    font-size: .9rem;
+                }
+            }
+            .options{
+                padding: 10px 15px;
+                 padding-bottom: 0px;
+                padding-top: 0px;
+                border-top: 1px solid #cccccc82;
+                ul{
+                    li{
+                        float: left;
+                        padding: 10px 20px;
+                       
+                        border-right: 1px solid #cccccc82;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.no-bgpack{
+    background-image: url(../images/most-popular-bg.jpg);
+}
+
+/* ===================================== Responsive Style CSS ==================================== */
+
+.what-people-say{
+     @include big-padding();
+    background-color: #cccccc47;
+    .what-people-say-row{
+        margin-top: 70px;
+    }
+    .peole-col{
+        background-color: #FFF;
+        padding: 20px;
+        text-align: center;
+        @include shado-4();
+        margin-bottom: 70px;
+        img{
+            width: 110px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            background-color: #FFF;
+            padding: 10px;
+            margin-top: -70px;
+        }
+        p{
+            font-size: .84rem
+        }
+        h4{
+            margin-top: 14px;
+            font-weight: 600;
+            font-size: .94rem;
+        }
+    }
+}
+
+/* =================== Review Style Starts Here =================== */
+
+.blog{
+    @include big-padding();
+    background-color: #FFF;
+    .blog-row{
+        margin-top: 20px;
+        .blogcol{
+            margin-bottom: 30px;
+            img{
+                margin-bottom: 10px;
+            }
+            span{
+                font-size: .8rem;
+            }
+            h4{
+                margin-top: 10px;
+                font-weight: 600;
+                font-size: 1.1rem;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+/* =================== Footer Style Starts Here =================== */
+
+.footer{
+    background-color: #162e44;
+    @include big-padding();
+    color:#fff;
+    a{
+        color:#fff; 
+    }
+    h4{
+        font-weight: 600;
+        color: #FFF;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .address{
+        p{
+            font-weight: 600;
+            font-size: .9rem;
+        }
+    }
+    .qlink{
+        ul{
+            li{
+                padding: 3px;
+                font-size: .85rem;
+            }
+        }
+    }
+    .destinations{
+        ul{
+            li{
+                width: 50%;
+                padding: 10px;
+                float: left;
+                padding: 5px;
+                font-size: .85rem;
+            }
+        }
+    }
+    .gallery{
+        img{
+            margin-bottom: 15px;
+        }
+        .lck{
+            padding: 8px;    
+        }
+    }
+    .copy{
+        padding: 10px;
+        border-top: 1px solid #cccccc96;
+        padding-top: 30px;
+        font-size: .85rem;
+        span{
+            float: right;
+            i{
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+
+/* ===================================== Our Team Style  ================================== */
+
+.our-team {
+  padding: 50px; }
+  @media screen and (max-width: 940px) {
+    .our-team {
+      padding: 50px 10px; } }
+.our-team .team-row {
+    margin-top: 20px; }
+.our-team .team-row .single-usr {
+      box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54);
+      margin-bottom: 20px; 
+}
+.our-team .team-row .single-usr img {
+        width: 100%; 
+}
+.our-team .team-row .single-usr .det-o {
+        padding: 20px;
+        background-color: #01b3a7; 
+}
+.our-team .team-row .single-usr .det-o h4 {
+          color: #FFF;
+          margin-bottom: 0px; 
+}
+.our-team .team-row .single-usr .det-o i {
+          color: #FFF; 
+}
+
+
+
+/* ===================================== Responsive Style CSS ==================================== */
+
+@import 'response/responsive';
