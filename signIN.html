@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Free Tour and Travel Website Template | Smarteyeapps.com</title>
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="css form/style.css">
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div id="menu" class="col-lg-8 col-md-12 d-none d-md-block navs">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about_us.html">About US</a></li>
+                            <li><a href="packages.html">Our Packages</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li><a href="signIN.html">Sign-In</a></li>
+                            <li><a href="signUP.html">Sign-Up</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 d-none d-lg-block socials">
+                        <ul>
+                            <li><i class="fab fa-facebook-square"></i></li>
+                            <li><i class="fab fa-twitter-square"></i></li>
+                            <li><i class="fab fa-instagram"></i></li>
+                            <li><i class="fab fa-linkedin"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="slider container-fluid">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="single.html">
+                        <img src="assets/images/slider/slid_2.jpg" class="d-block w-100" alt="...">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="single.html">
+                        <img src="assets/images/slider/slid_1.jpg" class="d-block w-100" alt="...">
+                    </a>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="main1">
+        <div class="container1 container_signIN">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="/assets/images/form img 3.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="login-form">
+                        <h1>Sign In</h1>
+                        <div class="form-group">
+                            <label for="email">Email ID:</label>
+                            <input type="email" name="email" id="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" required />
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Sign In" class="submit" name="submit" id="submit" />
+                        </div>
+                        <div id="login-msg" class="validation-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="/vendor copy/jquery/jquery.min.js"></script>
+        <script>
+
+            
+            document.getElementById('login-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                let email = document.getElementById('email').value;
+                let password = document.getElementById('password').value;
+                let users = JSON.parse(localStorage.getItem('users')) || [];
+
+                let validUser = users.find(user => user.email === email && user.password === password);
+
+                if (validUser) {
+                    localStorage.setItem('isLogin', 'true');
+                    window.location.href = "index.html";
+                } else {
+                    document.getElementById('Password-msg').innerText = "Invalid email or password";
+                    document.getElementById('login-msg').classList.remove('valid');
+                }
+            });
+        </script>
+    </div>
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
+<script src="assets/js/script.js"></script>
+</html>

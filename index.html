@@ -14,18 +14,39 @@
     <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
-        .price_container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 250px;
+        .filter-controls {
+            margin: 20px 0;
         }
-        .price{
-            font-size: x-large;
-            font-weight: 900;
+        .like-icon {
+            cursor: pointer;
+            font-size: xx-large;
+            color: red;
+        }
+        .comment-section {
+            margin-top: 20px;
+        }
+        .comment-list li {
+            list-style: none;
+            padding: 5px 0;
+        }
+        .comment-list li:not(:last-child) {
+            border-bottom: 1px solid #ccc;
+        }
+        .shake {
+            animation: shake 0.5s;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-10px); }
+            40%, 80% { transform: translateX(10px); }
         }
     </style>
+    
+    
 </head>
 
     <body>
@@ -58,9 +79,13 @@
                                <li><a href="index.html">Home</a></li>
                                <li><a href="about_us.html">About US</a></li>
                                <li><a href="packages.html">Our Packages</a></li>
-                               <li><a href="services.html">Services</a></li>
-                               <li><a href="blog.html">Blog</a></li>
+                              
                                <li><a href="contact-us.html">Contact Us</a></li>
+                               <li><a href="signIN.html">Sign-In</a></li>
+                               <li><a href="signUP.html">Sign-Up</a></li>
+
+
+
                            </ul>
                        </div>
                        <div class="col-md-4 d-none d-lg-block socials">
@@ -133,34 +158,24 @@
    
 
    
-    
-    <div class="travel-destination container-fluid">
-        <div class="container-fluid">
-           
-            
-        </div>
-    </div>
-    
-
-
-    
-     <!--*************** About Us Starts Here ***************-->
-   
-   <section id="about" class="contianer-fluid about-us">
-       <div class="container">
-            <div class="row">
-                <div class="col-md-7 text">
-                    <h2>About Smart Traveler</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                    <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. dummy text of the printing and  been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.dummy text of the has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                   
-                </div>
-                <div class="col-md-5 center image">
-                    <img src="assets/images/about.jpg" alt="">
-                </div>
+    <div class="container-fluid" id="tourpackages">
+        <div class="filter-controls d-flex justify-content-between">
+            <div>
+                <select class="form-select" id="sortFilter" onchange="applySortFilter()">
+                    <option value="all">All Places</option>
+                    <option value="title">Title (A to Z)</option>
+                    <option value="Cost">Price (Low to High)</option>
+                    <option value="like">Likes (Low to High)</option>
+                </select>
             </div>
-       </div>
-   </section>
+        </div>
+        <div class="row" id="packageCards"></div>
+    </div>
+
+    <div class="container comments-section mt-5" id="commentsSection">
+        <h2>Comments</h2>
+        <ul class="comment-list" id="allComments"></ul>
+    </div>
    
    
     <!--*************** Our Services Starts Here ***************-->
@@ -349,74 +364,12 @@
     </div>
     
     
-    <!-- ################# What people say Starts Here #######################--->
-    
-    <div class="what-people-say container-fluid">
-        <div class="container">
-            <div class="session-title row">
-                <h2>What people say about Us</h2>
-                <p>when an unknown printer took a galley of type and scrambled it to make</p>
-            </div>
-            <div class="what-people-say-row row">
-                <div class="col-md-4">
-                    <div class="peole-col">
-                        <img src="assets/images/testimonial/member-01.jpg" alt="">
-                        <p>Sed sed mattis arcu, eget porttitor urna. Vestibulum ultricies varius suscipit. Quisque imperdiet justo at eleifend feugiat. In hac habitasse platea dictumst. Etiam in turpis in urna vulputate</p>
-                        <h4>James Anderson</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="peole-col">
-                        <img src="assets/images/testimonial/member-02.jpg" alt="">
-                        <p>Sed sed mattis arcu, eget porttitor urna. Vestibulum ultricies varius suscipit. Quisque imperdiet justo at eleifend feugiat. In hac habitasse platea dictumst. Etiam in turpis in urna vulputate</p>
-                        <h4>Philip Jasmes</h4>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="peole-col">
-                        <img src="assets/images/testimonial/member-03.jpg" alt="">
-                        <p>Sed sed mattis arcu, eget porttitor urna. Vestibulum ultricies varius suscipit. Quisque imperdiet justo at eleifend feugiat. In hac habitasse platea dictumst. Etiam in turpis in urna vulputate</p>
-                        <h4>Jason Rose</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>  
     
     
-    <!--################### Blog Starts Here #######################--->  
+    
+   
      
-        <div class="blog container-fluid">
-            <div class="container">
-                 <div class="session-title row">
-                    <h2>Our Latest Blog</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin nisi id consequat bibendum. Phasellus at convallis elit. In purus enim, scelerisque id arcu vitae</p>
-                </div>
-                <div class="row blog-row">
-                    <div class="col-md-4">
-                        <div class="blogcol">
-                            <img src="assets/images/packages/p1.jpg" alt="">
-                              <span>Oct 12, 2019</span> 
-                              <h4>Journeys Are Best Measured In New Friends</h4> 
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="blogcol">
-                            <img src="assets/images/packages/p2.jpg" alt="">
-                              <span>Oct 12, 2019</span> 
-                              <h4>Morbi sollicitudin nisi id consequat bibendum</h4> 
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="blogcol">
-                            <img src="assets/images/packages/p3.jpg" alt="">
-                              <span>Oct 12, 2019</span> 
-                              <h4>Journeys Are Best Measured In New Friends</h4> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         
       <!--################### Footer Starts Here #######################--->  
           
@@ -501,4 +454,10 @@
     <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
     <script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+     if (!localStorage.getItem('isLogin') || localStorage.getItem('isLogin') !== 'true') {
+            window.location.href = "signUP.html";
+        }
+  
+      </script>
 </html>
