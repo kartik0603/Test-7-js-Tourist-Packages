@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tourist Packages</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Tour Packages</h1>
+        <div class="sort-options">
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+                <option value="price">Price (Low to High)</option>
+                <option value="rating">Rating (Low to High)</option>
+                <option value="title">Title</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <div id="packages" class="packages">
+            <!-- Packages will be dynamically inserted here -->
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
