@@ -87,7 +87,7 @@ const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')) || { first
 
 const mapper = (data) => {
     const container = document.getElementById('packageCards');
-    container.innerHTML = ''; // Clear existing content
+    container.innerHTML = ''; 
     data.forEach((ele, index) => {
         const col = document.createElement('div');
         col.className = 'col-lg-4 col-md-6 col-sm-12 mb-4';
@@ -116,7 +116,7 @@ const mapper = (data) => {
 
         const likeIcon = document.createElement('span');
         likeIcon.className = 'like-icon mr-2';
-        likeIcon.innerHTML = '<i class="fas fa-heart"></i>'; // Font Awesome heart icon
+        likeIcon.innerHTML = '<i class="fas fa-heart"></i>'; 
         likeIcon.addEventListener('click', () => {
             ele.like++;
             likeCount.innerHTML = ele.like;
@@ -133,6 +133,7 @@ const mapper = (data) => {
         card.append(picture, cardBody);
         col.append(card);
         container.append(col);
+        
 
         // Add comment input and section
         const commentInput = document.createElement('input');
@@ -155,7 +156,7 @@ const mapper = (data) => {
 const displayComments = () => {
     const commentsSection = document.getElementById('commentsSection');
     const allCommentsList = document.getElementById('allComments');
-    allCommentsList.innerHTML = ''; // Clear existing comments
+    allCommentsList.innerHTML = ''; 
 
     data.forEach((ele) => {
         if (ele.comment.length > 0) {
@@ -173,13 +174,7 @@ const displayComments = () => {
         }
     });
 
-    if (allCommentsList.children.length === 0) {
-        const noCommentsMessage = document.createElement('p');
-        // noCommentsMessage.textContent = 'No comments yet.';
-        commentsSection.appendChild(noCommentsMessage);
-    } else {
-        commentsSection.prepend(document.createElement('hr'));
-    }
+    
 };
 
 const applySortFilter = () => {
